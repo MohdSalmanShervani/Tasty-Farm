@@ -3,14 +3,19 @@
 import React from "react";
 const ProductCard = ({ image, name, description }) => {
   return (
-    <div className="p-4 w-full sm:w-[280px] h-[180px] bg-yellow-300 shadow-md flex flex-col items-center">
+    <div className="shadow-md">
       <img
         src={image}
         alt={name}
-        className="w-full h-[100px] object-cover mb-2"
+        className="w-full object-cover mb-2"
       />
-      <h2 className="text-lg font-semibold mb-1 text-center">{name}</h2>
-      <p className="text-sm text-gray-700 text-center">{description}</p>
+   {/*   <div className="relative group  mx-auto  bg-gray-800 flex items-center justify-center">
+        <span className="absolute text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Hovered Text
+        </span>
+      </div> */}
+      {/* <h2 className="text-lg font-semibold mb-1 text-center">{name}</h2>
+      <p className="text-sm text-gray-700 text-center">{description}</p> */}
     </div>
   );
 };
@@ -33,7 +38,7 @@ const ProductSlider = () => {
       description: "Bold chilies stuffed with rich spices."
     },
     {
-      image: "/media/images/productImage1.svg",
+      image: "/media/images/productImage4.svg",
       name: "Lemon Pickle",
       description: "Tangy and spicy lemon pickle."
     },
@@ -41,9 +46,10 @@ const ProductSlider = () => {
 
   return (
     <div className="w-full p-4 flex flex-col items-center">
-      <h1 className="text-2xl font-bold text-gray-800 mb-6">Our Products</h1>
-      <div className="w-full flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[116px]">
+      <h1 className="text-2xl font-bold text-black mb-4
+      ">OUR PRODUCTS</h1>
+      
+        <div className="flex flex-row xl:px-2 xl:pt-0 justify-between mb-3 gap-4">
           {ProductDetails.map((product, index) => (
             <ProductCard
               key={index}
@@ -51,10 +57,10 @@ const ProductSlider = () => {
               name={product.name}
               description={product.description}
             />
+       
           ))}
         </div>
       </div>
-    </div>
   );
 };
 

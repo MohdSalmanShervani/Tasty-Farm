@@ -1,20 +1,32 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
+import { Facebook, Twitter, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8">
-      <div className="max-w-screen-xl mx-auto text-center">
-        <div className="flex flex-col items-center space-y-2">
-          <p className="text-xl font-semibold">Contact Us</p>
-          <div className="flex flex-col items-center space-y-2 sm:flex-row sm:space-x-4 sm:space-y-0">
-            <p className="text-md">Tasty Farm</p>
-            <p className="text-md">+91 7217620172</p>
-          </div>
-        </div>
+    <footer className="bg-black text-white py-4 px-1 ">
+    <div className="container mx-auto flex justify-between items-center">
+      {/* Social Media Icons */}
+      <div className="flex space-x-4 ml-4">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+          <Facebook className="w-6 h-6 text-gray-300" />
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+          <Twitter className="w-6 h-6 text-gray-300" />
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+          <Instagram className="w-6 h-6 text-gray-300" />
+        </a>
       </div>
-    </footer>
+
+      {/* Contact Information */}
+      <div className="text-right mr-4">
+        <p>contact@tastifarm.com</p>
+        <p>+91 7217620172</p>
+      </div>
+    </div>
+  </footer>
   );
 };
 

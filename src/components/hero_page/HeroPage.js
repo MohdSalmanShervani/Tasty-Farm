@@ -25,7 +25,7 @@ const HeroPage = () => {
   }, [images.length]);
 
   return (
-    <div className="bg-white h-[280px] px-6 overflow-hidden flex items-center justify-center">
+    <div className="bg-white h-[280px] overflow-hidden flex items-center justify-center">
       <img
         className={`w-full h-auto object-cover transition-opacity duration-1000 ease-in-out ${
           isFading ? 'opacity-0' : 'opacity-100'
