@@ -23,7 +23,7 @@ const Footer = () => {
       {/* Contact Information */}
       <div className="text-right mr-4">
         <p>contact@tastifarm.com</p>
-        <p>+91 7217620172</p>
+        <p>+91 8882388903</p>
       </div>
     </div>
   </footer>
